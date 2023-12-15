@@ -1,2 +1,5 @@
-package andreamarchica.entities;public enum Periodicità {
+package andreamarchica.entities;
+
+public enum Periodicità {
+    SETTIMANALE, MENSILE, SEMESTRALE
 }
