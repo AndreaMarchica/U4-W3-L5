@@ -25,12 +25,20 @@ public class Application {
         Faker faker = new Faker(Locale.ITALY);
         UUID uuid = UUID.randomUUID();
 
-/*        Libro libro = new Libro(faker.book().author(), faker.book().title(), faker.book().genre(), 1997, 452, uuid);
-        eb.save(libro);*/
+        Libro libro = new Libro(faker.book().author(), faker.book().title(), faker.book().genre(), 1997, 452, uuid);
+        eb.save(libro);
         System.out.println("Hello World!");
 
-        Utente utente = new Utente(faker.name().firstName(), faker.name().lastName(),  LocalDate. of(2022,11,05));
-        u.save(utente);
+/*        Utente utente = new Utente(faker.name().firstName(), faker.name().lastName(),  LocalDate. of(2022,11,05));
+        Utente utente1 = new Utente(faker.name().firstName(), faker.name().lastName(),  LocalDate. of(2022,11,05));
+        Utente utente2 = new Utente(faker.name().firstName(), faker.name().lastName(),  LocalDate. of(2022,11,05));
+        Utente utente3 = new Utente(faker.name().firstName(), faker.name().lastName(),  LocalDate. of(2022,11,05));
+        Utente utente4 = new Utente(faker.name().firstName(), faker.name().lastName(),  LocalDate. of(2022,11,05));
+        u.save(utente1);
+        u.save(utente2);
+        u.save(utente3);
+        u.save(utente4);*/
+
 
         em.close();
         emf.close();
