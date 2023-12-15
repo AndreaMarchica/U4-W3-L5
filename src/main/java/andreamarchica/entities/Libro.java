@@ -19,7 +19,7 @@ public class Libro extends ElementoBibliotecario {
 
     public Libro() {
     }
-    public Libro(String autore, String titolo, String genere, int annoPubblicazione, int numeroPagine, long isbn) {
+    public Libro(String autore, String titolo, String genere, int annoPubblicazione, int numeroPagine, UUID isbn) {
         super(titolo, annoPubblicazione, numeroPagine, isbn);
         this.autore = autore;
         this.genere = genere;

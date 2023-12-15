@@ -1,6 +1,7 @@
 package andreamarchica.entities;
 
 import javax.persistence.*;
+import java.util.UUID;
 
 @Entity
 public class Rivista extends ElementoBibliotecario {
@@ -15,7 +16,7 @@ public class Rivista extends ElementoBibliotecario {
     public Rivista() {
     }
 
-    public Rivista(Periodicità periodicità, String titolo, int annoPubblicazione, int numeroPagine, long isbn) {
+    public Rivista(Periodicità periodicità, String titolo, int annoPubblicazione, int numeroPagine, UUID isbn) {
         super(titolo, annoPubblicazione, numeroPagine, isbn);
         this.periodicità = periodicità;
     }

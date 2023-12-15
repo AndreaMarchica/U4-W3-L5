@@ -15,7 +15,7 @@ public abstract class ElementoBibliotecario {
 
     @Id
     @GeneratedValue
-    private long isbn;
+    private UUID isbn;
     @Column(name = "Id")
     private String titolo;
     @Column(name = "Anno_di_pubblicazione")
@@ -28,7 +28,7 @@ public abstract class ElementoBibliotecario {
     /*COSTRUTTORI*/
 
     public ElementoBibliotecario(){}
-    public ElementoBibliotecario(String titolo, int annoPubblicazione, int numeroPagine, long isbn) {
+    public ElementoBibliotecario(String titolo, int annoPubblicazione, int numeroPagine, UUID isbn) {
         this.titolo = titolo;
         this.annoPubblicazione = annoPubblicazione;
         this.numeroPagine = numeroPagine;
@@ -38,11 +38,11 @@ public abstract class ElementoBibliotecario {
     /*METODI*/
 
 
-    public long getIsbn() {
+    public UUID getIsbn() {
         return isbn;
     }
 
-    public void setIsbn(long isbn) {
+    public void setIsbn(UUID isbn) {
         this.isbn = isbn;
     }
 
