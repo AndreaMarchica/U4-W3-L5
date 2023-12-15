@@ -5,6 +5,7 @@ import andreamarchica.entities.ElementoBibliotecario;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
 import java.util.List;
+import java.util.UUID;
 
 public class CatalogoBibliotecarioDAO {
     private final EntityManager em;
@@ -26,12 +27,12 @@ public class CatalogoBibliotecarioDAO {
         System.out.println("Nuovo elemento bibliotecario salvato correttamente");
     }
 
-    public ElementoBibliotecario findById(long id) {
-        // SELECT * FROM students WHERE students.id=1
-        return em.find(ElementoBibliotecario.class, id);
+    public ElementoBibliotecario findById(UUID isbn) {
+        // SELECT * FROM students WHERE students.isbn=1
+        return em.find(ElementoBibliotecario.class, isbn);
     }
 
-    public void findByIdAndDelete(long isbn) {
+    public void findByIdAndDelete(UUID isbn) {
 
         // 1. Faccio una find per cercare lo studente
         ElementoBibliotecario found = em.find(ElementoBibliotecario.class, isbn);

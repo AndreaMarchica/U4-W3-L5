@@ -1,6 +1,7 @@
 package andreamarchica.entities;
 
 import javax.persistence.*;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
@@ -19,7 +20,7 @@ public class Utente {
     @Column(name = "Cognome")
     private String cognome;
     @Column(name = "Data_di_nascita")
-    private String dataDiNascita;
+    private LocalDate dataDiNascita;
     @OneToMany(mappedBy = "utente")
     private List<Prestito> prestiti = new ArrayList<>();
 
@@ -27,7 +28,7 @@ public class Utente {
 
     public Utente() {
     }
-    public Utente(String nome, String cognome, String dataDiNascita) {
+    public Utente(String nome, String cognome, LocalDate dataDiNascita) {
         this.nome = nome;
         this.cognome = cognome;
         this.dataDiNascita = dataDiNascita;
@@ -60,11 +61,11 @@ public class Utente {
         this.cognome = cognome;
     }
 
-    public String getDataDiNascita() {
+    public LocalDate getDataDiNascita() {
         return dataDiNascita;
     }
 
-    public void setDataDiNascita(String dataDiNascita) {
+    public void setDataDiNascita(LocalDate dataDiNascita) {
         this.dataDiNascita = dataDiNascita;
     }
 
